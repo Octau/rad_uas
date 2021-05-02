@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Supplier extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+    protected $guarded = [];
+
+    public function purchases(){
+        return belongsToMany(Purchase::class, 'supplier_id');
+    }
 }

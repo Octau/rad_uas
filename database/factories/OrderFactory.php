@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Supplier;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SupplierFactory extends Factory
+class OrderFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Supplier::class;
+    protected $model = Order::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +22,7 @@ class SupplierFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'address' => $this->faker->address,
-            'status' => true,
-            'telp' => $this->faker->phoneNumber,
-            'email' => $this->faker->email,
+            //
         ];
     }
 }
