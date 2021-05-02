@@ -10,6 +10,7 @@ class Supplier extends Model
     use HasFactory;
     protected $fillable = [];
     protected $guarded = [];
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function purchases(){
         return belongsToMany(Purchase::class, 'supplier_id');
