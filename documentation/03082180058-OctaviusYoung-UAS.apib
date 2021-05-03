@@ -1,0 +1,501 @@
+FORMAT: 1A
+HOST: http://locahost:8000/api
+
+# 2021_05_03_071521_UAS_api
+
+
+# Group Supplier
+
+## Retrieve Supplier By Name [/supplier/{name}]
+
++ Parameters
+    + name (string, required)
+
+        (Optional)
+
+        + Sample: null
+
+### GET | api/supplier/name [GET]
+
++ Request (application/json)
+
+
+
+
++ Response 200 
+
+
+
+
+## Supplier Create [/supplier/create{?name,address,status,telp,email}]
+
+### POST | api/supplier/create [POST]
++ Parameters
+    + name (string, required)
+
+    + address (string, required)
+
+    + status (string, required)
+
+    + telp (string, required)
+
+    + email (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Supplier Update By Id [/supplier/{id}/update{?name,address,status,telp,email}]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### PUT | apisupplier/id/update [PUT]
++ Parameters
+    + name (string, required)
+
+    + address (string, required)
+
+    + status (string, required)
+
+    + telp (string, required)
+
+    + email (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Supplier Delete By Id [/supplier/{id}/delete]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### DELETE | api/supplier/id/delete [DELETE]
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+# Group Product Type
+
+
+## Retrieve Product Type By Name [/product_type/{name}]
+
++ Parameters
+    + name (string, required)
+
+        (Optional)
+
+        + Sample: null
+
+### GET | api/producttype/name [GET]
+
++ Request (application/json)
+
+
+
+
++ Response 200 
+
+
+
+
+## Product Type Create [/product_type/create{?name}]
+
+### POST | api/producttype/create [POST]
++ Parameters
+    + name (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Product Type Update By Id [/product_type/{id}/update{?name}]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### PUT | api/producttype/id/update [PUT]
++ Parameters
+    + name (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Product Type Delete By Id [/product_type/{id}/delete]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### DELETE | api/producttype/id/delete [DELETE]
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+# Group Product
+
+## Retrieve Product By Name [/product/{name}]
+
++ Parameters
+    + name (string, required)
+
+        (Optional)
+
+        + Sample: null
+
+### GET | api/product/name [GET]
+
++ Request (application/json)
+
+
+
+
++ Response 200 
+
+
+
+
+## Product Create [/product/create{?name,product_type_id}]
+
+### POST | api/product/create [POST]
++ Parameters
+    + name (string, required)
+
+    + product_type_id (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Product Update By Id [/product/{id}/update{?name,product_type_id}]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### PUT | api/product/id/update [PUT]
++ Parameters
+    + name (string, required)
+
+    + product_type_id (string, required)
+
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+## Product Delete By Id [/product/{id}/delete]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### DELETE | api/product/id/delete [DELETE]
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+# Group Order
+
+## Retrieve Order By Id [/order/{id}]
+
++ Parameters
+    + id (string, required)
+
+        (Optional)
+
+        + Sample: null
+
+### GET | api/order/id [GET]
+
++ Request (application/json)
+
+
+
+
++ Response 200 
+
+
+
+
+## Order Create [/order/create]
+
+### POST | api/order/create [POST]
+
++ Request (application/json)
+
+    + Attributes (POST | apiordercreate Request)
+
+
+    + Body
+
+            {
+                "items": [
+                    {
+                        "product_id": 1,
+                        "qty": 100
+                    },
+                    {
+                        "product_id": 12,
+                        "qty": 112
+                    }
+                ]
+            }
+
+
++ Response 200 
+
+
+
+
+## Order Delete By Id [/order/{id}/delete]
+
++ Parameters
+    + id (string, required)
+
+        (Required)
+
+        + Sample: null
+
+### DELETE | api/order/id/delete [DELETE]
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+# Group Purchase
+
+## Retrieve Purchase By Id [/purchase/{id}]
+
++ Parameters
+    + id (string, required)
+
+        (Optional)
+
+        + Sample: null
+
+### GET | api/purchase/id [GET]
+
++ Request (application/json)
+
+
+
+
++ Response 200 
+
+## Purchase Create [/purchase/create]
+
+### POST | api/purchase/create [POST]
+
++ Request (application/json)
+
+    + Attributes (POST | apipurchasecreate Request)
+
+
+    + Body
+
+            {
+                <!--supplier_id-->
+                "supplier_id": #supplier_id,
+                <!--#item list-->
+                "items": [
+                    {
+                        "product_id": ,
+                        "qty":
+                    },
+                    {
+                        "product_id":,
+                        "qty": 
+                    }
+                ]
+            }
+
+
++ Response 200 
+
+
+
+
+## Purchase Delete By Id [/purchase/{id}/delete]
+
++ Parameters
+    + id (number, required)
+
+        (Required)
+
+        + Sample: 201
+
+### DELETE | apipurchaseiddelete [DELETE]
+
++ Request (application/json)
+
+    + Attributes (string)
+
+
+    + Body
+
+            {\n    \n}
+
+
++ Response 200 
+
+
+
+
+
+# Data Structures
+
+## POST | apiordercreate Request (object)
+
+
+### Properties
++ `items` (array[Item], required) 
+
+
+## Item (object)
+
+
+### Properties
++ `product_id` (number, required) 
++ `qty` (number, required) 
+
+
+## POST | apipurchasecreate Request (object)
+
+
+### Properties
++ `supplier_id` (number, required) 
++ `items` (array[Item], required) 
+
