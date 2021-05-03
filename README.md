@@ -1,4 +1,4 @@
-##Installation
+## Installation
 Clone this repository and then get into the directory of the project folder
 ```
 composer install
@@ -14,15 +14,6 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-Email Service
-```
-MAIL_MAILER=smtp
-MAIL_HOST=mailhog
-MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-```
 
 Then generate your project key
 ```
@@ -35,7 +26,7 @@ Simply run
 ```
 php artisan migrate:fresh
 ```
-To install the database schema with the prepared user entry
+To install the database schema with the prepared data
 ```
 php artisan migrate:fresh --seed
 ```
