@@ -13,6 +13,6 @@ class ProductType extends Model
     protected $hidden = ['created_at', 'updated_at'];
     
     public function products(){
-        return $this->belongsToMany(Products::class, 'product_type_id');
+        return $this->hasMany(Product::class, 'product_type_id');
     }
 }

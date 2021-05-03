@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator; 
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ProductTypeRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,9 +30,13 @@ class ProductTypeRequest extends FormRequest
                 'required',
                 'string',
             ],
+            'product_type_id' => [
+                'required',
+                'numeric',
+                'exists:product_types,id',
+            ],
         ];
     }
-
 
     protected function failedValidation(Validator $validator) { 
         throw new HttpResponseException(response()->json($validator->errors(), 422)); 

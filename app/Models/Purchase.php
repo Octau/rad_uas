@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Purchase extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+    protected $guarded = [];
     
     public function itemListings(){
         return $this->hasMany(ItemListing::class, 'purchase_id');
     }
 
     public function supplier(){
-        return $this->has(Supplier::class, 'supplier_id');
+        return $this->belongsTo(Supplier::class, 'supplier_id');
     }
 }

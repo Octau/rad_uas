@@ -8,12 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+    protected $guarded = [];
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function itemListings(){
         return $this->hasMany(ItemListing::class, 'product_id');
     }
 
     public function productType(){
-        return $this->has(ProductType::class, 'product_type_id');
+        return $this->belongsTo(ProductType::class, 'product_type_id');
     }
 }

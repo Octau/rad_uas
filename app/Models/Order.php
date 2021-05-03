@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+    protected $guarded = [];
 
     public function itemListings(){
         return $this->hasMany(ItemListing::class, 'order_id');

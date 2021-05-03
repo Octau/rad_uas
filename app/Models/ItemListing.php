@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ItemListing extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+    protected $guarded = [];
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function orders(){
         return $this->belongsTo(Order::class, 'order_id');
