@@ -39,7 +39,7 @@ php artisan serve
 ```
 or to specify the port that you want the project run on
 ```
-php artisan serve --port=portgoeshere</i>
+php artisan serve --port=portgoeshere
 ```
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
