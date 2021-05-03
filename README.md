@@ -1,3 +1,53 @@
+##Installation
+Clone this repository and then get into the directory of the project folder
+```
+composer install
+```
+Create a new `.env` file in the root directory and copy everything from `.env.example` and paste it into `.env` file.
+Configure the database and email service in `.env` file.
+Database
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+Email Service
+```
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+```
+
+Then generate your project key
+```
+php artisan key:generate
+```
+
+## Database Installation
+Make sure your database is up and running before installing pre-made database schema.
+Simply run
+```
+php artisan migrate:fresh
+```
+To install the database schema with the prepared user entry
+```
+php artisan migrate:fresh --seed
+```
+
+## Running the project
+Make sure your database is up and running before running the project.
+To run the project, simply command:
+```
+php artisan serve
+```
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
