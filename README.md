@@ -1,3 +1,7 @@
+## Documentation
+Documentation about the API, database and structure can be found [here](https://github.com/Octau/rad_uas/tree/main/documentation).
+
+
 ## Installation
 Clone this repository and then get into the directory of the project folder
 ```
