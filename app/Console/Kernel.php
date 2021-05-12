@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
-    ];
+    ]; ///aaaaa
 
     /**
      * Define the application's command schedule.
